@@ -1,8 +1,11 @@
+import logo from "../images/blog-logo.png";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>
         <a href="/" className="text-secondary">
+          <img src={logo} alt="logo" />
           React Mini Blog
         </a>
       </h1>
