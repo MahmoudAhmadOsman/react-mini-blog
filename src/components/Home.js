@@ -40,13 +40,24 @@ const Home = () => {
     },
   ]);
 
+  //Delete Blog Posts
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
+    //Now, set  the newBlogs value to the setBlogs Hook
+    setBlogs(newBlogs);
+  };
+
   return (
     <section className="home">
       <div className="container">
-        {/* <h1 class="text-danger">{blogTitiles}</h1> <hr /> */}
         <div className="row">
           {/* St: 1 Use props to pass data to the BlogList component */}
-          <BlogList blogs={blogs} blogTitiles={blogTitiles} />
+          <BlogList
+            blogs={blogs}
+            blogTitiles={blogTitiles}
+            //handleDelete func to delete blogs and then pass it as a props to the BlogList component
+            handleDelete={handleDelete}
+          />
         </div>
       </div>
     </section>
