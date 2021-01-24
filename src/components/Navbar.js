@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>
-        <a href="/" className="text-danger">
+        <a href="/" className="text-secondary">
           React Mini Blog
         </a>
       </h1>

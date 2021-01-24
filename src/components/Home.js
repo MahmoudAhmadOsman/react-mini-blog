@@ -1,7 +1,10 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
+  let blogTitiles = "Latest Blog Updates";
   // Display list of blog posts using useState() function
+  //1. Desctructure the data using blogs & setBlogs [] array desctructing
   const [blogs, setBlogs] = useState([
     {
       id: 1,
@@ -27,40 +30,23 @@ const Home = () => {
       author: "Paulie Riguard",
       PublushiedDate: "11/14/2020",
     },
+    {
+      id: 4,
+      title: "Analog Circuit Design manager",
+      body:
+        "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      author: "Betteann Longdon",
+      PublushiedDate: "10/9/2020",
+    },
   ]);
 
   return (
     <section className="home">
       <div className="container">
+        {/* <h1 class="text-danger">{blogTitiles}</h1> <hr /> */}
         <div className="row">
-          {blogs.map((blog) => (
-            <div className="col-md-10" key={blog.id}>
-              <h1>
-                <a href={blog.id}>{blog.title}</a>{" "}
-              </h1>
-              <p>{blog.body}</p>
-              <p className="text-muted">
-                <small>
-                  <b>
-                    <i
-                      className="fa fa-user-circle"
-                      aria-hidden="true"
-                      title={blog.author}
-                    ></i>{" "}
-                    &nbsp;
-                  </b>
-                  {blog.author} | &nbsp;
-                </small>
-                <small>
-                  <b>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                  </b>{" "}
-                  &nbsp;
-                  {blog.PublushiedDate}
-                </small>
-              </p>
-            </div>
-          ))}
+          {/* St: 1 Use props to pass data to the BlogList component */}
+          <BlogList blogs={blogs} blogTitiles={blogTitiles} />
         </div>
       </div>
     </section>
