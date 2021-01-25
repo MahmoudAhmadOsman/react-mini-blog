@@ -1,6 +1,7 @@
  
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
+import Footer from "./Footer";
 
 const Home = () => {
   let blogTitiles = "Latest Blog Updates";
@@ -26,14 +27,6 @@ const Home = () => {
   const handleEdit = (id) => {
     alert(id);
   };
-
-
-
-
-
-
-
-
 
 
 
@@ -90,6 +83,8 @@ const Home = () => {
             //handleEdit function
             handleEdit={handleEdit}/>}
       </div>
+
+      <Footer />
     </section>
   );
 };

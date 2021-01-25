@@ -60,3 +60,29 @@
    display: flex;
   
  }
+
+
+ /* Footer */
+  footer{
+    margin-top: 100px;
+    left: 0;
+    right:0;
+    position: absolute;
+    background-color:#2b2929;
+   
+    
+  }
+  footer *{
+    color: #fff;
+  }
+  footer ul li a{
+    color: #fff
+  }
+  footer .copyright{
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+  }
+  footer a{
+    color: #fff;
+  }
