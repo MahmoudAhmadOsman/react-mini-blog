@@ -8,16 +8,11 @@
  * HTML5
  * CSS3
 
-## Clone
 
-To clone this project use this command
-
-```bash
-$ git clone https://github.com/MahmoudAhmadOsman/employee-system.git
-```
+#______________________________________________________________________________________________________
 
 See the demo link:
-[React-js demo](https://react-mini-blog-npibvpem6.vercel.app/
+[React-js demo](https://react-mini-blog-npibvpem6.vercel.app/)
 
 ### My Website
 
