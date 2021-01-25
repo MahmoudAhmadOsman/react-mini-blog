@@ -63,7 +63,7 @@ const Footer = () => {
  
   <div class="copyright text-center p-3">
      &copy; Copyright {(new Date().getFullYear())}.  All Rights Are Reserved. Designed & Developed by &nbsp;
-    <a  href="http://mahmoudosman.com/" target="_blank">Mahmoud Osman</a>
+    <a  href="http://mahmoudosman.com/">Mahmoud Osman</a>
   </div>
    
 </footer>
