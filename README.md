@@ -1,6 +1,6 @@
-## Spring Boot & Angular 10   CRUD RESTAPI
+## React JS
 
- Built  with [Spring](https://spring.io/projects/spring-boot) Boot, JPA, Thymeleaf and MYSQL for backend database.
+ Built  with  React.js Bootstrap 4, HTML5, CSS3 & JSON SERVER.
 ## Used Technologies :+1: 
  * React js
  * Bootstrap 4
