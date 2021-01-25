@@ -12,12 +12,12 @@
 #______________________________________________________________________________________________________
 
 See the demo link:
-[React-js demo](https://react-mini-blog-npibvpem6.vercel.app/)
+[React-js demo](https://react-mini-blog-b375a5vlu.vercel.app/)
 
 ### My Website
 
 Please, visit my website
-[www.mahmoudosman.com](http://www.mahmoudosman.com/)
+[mahmoudosman.com](http://www.mahmoudosman.com/)
 
 
 ### Social Media
