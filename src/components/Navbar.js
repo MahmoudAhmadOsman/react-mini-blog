@@ -13,7 +13,9 @@ const Navbar = () => {
         <a href="/" className="mr-3">
           Home
         </a>
+        <a href="/about">About</a>
         <a href="/create">New Blog</a>
+        <a href="/contact">Contact</a>
       </div>
     </nav>
   );

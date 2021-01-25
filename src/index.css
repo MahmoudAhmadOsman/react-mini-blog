@@ -38,3 +38,16 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+ /* blog_list style */
+ .blog_list{
+   position: relative;
+ }
+ .blog_list .fa-user-circle,
+ .blog_list .fa-calendar{
+   color: #ee611f;
+   font-size: 18px;
+   
+   opacity: .7;
+ }
+ 
