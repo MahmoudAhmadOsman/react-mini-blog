@@ -1,5 +1,5 @@
 //St: 2 pass the props into the function -- Recieved props in destructing form
-const BlogList = ({ blogs, blogTitiles }) => {
+const BlogList = ({ blogs, blogTitiles, handleDelete, handleEdit }) => {
   //const BlogList = (props) => same as top
   // St: 3, create local variable
   //   const blogs = props.blogs;
@@ -43,7 +43,17 @@ const BlogList = ({ blogs, blogTitiles }) => {
                 {blog.PublushiedDate}
               </small>
             </p>
+            <button
+              onClick={() => handleEdit(blog.id)}
+              className="btn btn-outline-info btn-md fa fa-edit mr-3"
+              title="Edit"
+            ></button>
 
+            <button
+              onClick={() => handleDelete(blog.id)}
+              className="btn btn-outline-danger btn-md fa fa-trash"
+              title="Delete"
+            ></button>
             <hr />
           </div>
         </div>
