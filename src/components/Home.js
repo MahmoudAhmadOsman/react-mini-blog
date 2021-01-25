@@ -11,6 +11,32 @@ const Home = () => {
   const [isLoading, setisLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
+
+
+//Delete Blog Posts to delete posts
+  const handleDelete = (id) => {
+    //alert("Are you sure, you want to delete this post?");
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
+    //Now, set  the newBlogs value to the setBlogs Hook
+    setBlogs(newBlogs);
+  };
+
+  //handleEdit function to edit posts
+  const handleEdit = (id) => {
+    alert(id);
+  };
+
+
+
+
+
+
+
+
+
+
+
   /*
   - UseEffect Hook or function
   - Runs only after the 1st initial
@@ -60,7 +86,9 @@ const Home = () => {
             title="loading data..."
           ></div>
         )}
-        {blogs && <BlogList blogs={blogs} blogTitiles={blogTitiles} />}
+        {blogs && <BlogList blogs={blogs} blogTitiles={blogTitiles} handleDelete={handleDelete}
+            //handleEdit function
+            handleEdit={handleEdit}/>}
       </div>
     </section>
   );
