@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
 import logo from "../images/blog-logo.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>
-        <a href="/" className="text-secondary">
+        <Link to="/" className="text-secondary">
           <img src={logo} alt="logo" />
           React Mini Blog
-        </a>
+        </Link>
       </h1>
       <div className="links">
-        <a href="/" className="mr-3">
+        <Link to="/" className="mr-3">
           Home
-        </a>
-        <a href="/about">About</a>
-        <a href="/create">New Blog</a>
-        <a href="/contact">Contact</a>
+        </Link>
+        <Link to="/about">About</Link>
+        <Link to="/create">Add Post</Link>
+        <Link to="/contact">Contact</Link>
       </div>
     </nav>
   );
