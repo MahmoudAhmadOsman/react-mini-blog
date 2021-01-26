@@ -8,7 +8,7 @@ const Home = () => {
 
   //Now, import the useFetch Custom Hook
   const { data: blogs, isLoading, error } = useFetch(
-    "http://localhost:8000/blogss"
+    "http://localhost:8000/blogs"
   );
 
   return (
