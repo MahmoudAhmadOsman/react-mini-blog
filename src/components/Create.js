@@ -63,7 +63,7 @@ const Create = () => {
 
           {/* Published Date */}
           <div className="row">
-            <div className="col-md-2">
+            <div className="col-md-3">
               <div className="form-group">
                 <label htmlFor="date">Published Date</label>
                 <input type="date" className="form-control" required />
