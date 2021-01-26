@@ -8,7 +8,7 @@ const Home = () => {
 
   //Now, import the useFetch Custom Hook
   const { data: blogs, isLoading, error } = useFetch(
-    "http://localhost:8000/blogs"
+    "http://localhost:8000/blogss"
   );
 
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         {/* St: 1 Use props to pass data to the BlogList component */}
 
         {error && (
-          <div class="alert alert-danger mt-3">
+          <div class="alert alert-danger" style={{ marginTop: "9rem" }}>
             <strong>
               <i className="fa fa-warning mr-1"></i>
               {error}

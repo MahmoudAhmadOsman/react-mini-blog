@@ -19,7 +19,7 @@ function App() {
             <Route exact path="/about">
               <About />
             </Route>
-            <Route exact path="/create">
+            <Route exact path="/blogs/create">
               <Create />
             </Route>
           </Switch>

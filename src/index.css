@@ -86,3 +86,8 @@
   footer a{
     color: #fff;
   }
+
+  /* Create new post */
+  .create_post label{
+    font-weight: bold;
+  }
