@@ -46,6 +46,9 @@ body{
  .blog_list{
    position: relative;
  }
+ .blog_list img{
+   width: 100%;
+ }
  .blog_list .fa-user-circle,
  .blog_list .fa-calendar{
    color: #ee611f;
