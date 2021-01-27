@@ -3,14 +3,25 @@ import { Link } from "react-router-dom";
 //St: 2 pass the props into the function -- Recieved props in destructing form
 const BlogList = ({ blogs, blogTitiles }) => {
   //const BlogList = (props) => same as top
-  // St: 3, create local variable
+  //3. create local variable
   //   const blogs = props.blogs;
   //   console.log(props, blogs);
   // const blogTitiles = props.blogTitiles;
 
   return (
     <div className="blog_list">
-      <h1 className="text-danger">{blogTitiles}</h1> <hr />
+      <h1 className="text-danger">
+        {blogTitiles}{" "}
+        <small
+          className="text-muted pull-right mt-4"
+          style={{ fontSize: "12px" }}
+        >
+          Built with React js library | By
+          <a href="http://mahmoudosman.com/"> Mahmoud Osman</a>
+        </small>
+      </h1>
+
+      <hr />
       {blogs.map((blog) => (
         <div className="row" key={blog.id}>
           <div className="col-md-4">
