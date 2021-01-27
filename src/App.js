@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
 import BlogDetails from "./components/BlogDetails";
+import Contact from "./components/Contact";
 
 import Create from "./components/Create";
 
@@ -27,6 +28,10 @@ function App() {
 
             <Route exact path="/blogs/:id">
               <BlogDetails />
+            </Route>
+
+            <Route exact path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </div>

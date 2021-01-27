@@ -4,11 +4,11 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
   const blogDetailsTitle = " Blog Details";
-  //Use (useParams) Hook to get the blog params
+  //Use (useParams) Hook to get the blog params such as id, title, body etc
   const { id } = useParams();
   //Get the rest of the blog details by using the custon useFetch Hook
   const { data: blog, error, isLoading } = useFetch(
-    "http://localhost:8000/blogs/" + id
+    "https://blogs-api.herokuapp.com/blogs" + id
   );
 
   return (
@@ -53,7 +53,7 @@ const BlogDetails = () => {
               <p>
                 <i className="fa fa-user-circle"></i> &nbsp;
                 {blog.author} &nbsp; | &nbsp;
-                <span>{blog.PublushiedDate} </span>
+                <span className="text-muted">{blog.PublushiedDate} </span>
               </p>
 
               <hr />

@@ -8,13 +8,13 @@ const Home = () => {
 
   //Now, import the useFetch Custom Hook
   const { data: blogs, isLoading, error } = useFetch(
-    "http://localhost:8000/blogs"
+    "https://blogs-api.herokuapp.com/blogs"
   );
 
   return (
     <section className="home_page">
       <div className="container">
-        {/* St: 1 Use props to pass data to the BlogList component */}
+        {/*1. Use props to pass data to the BlogList component */}
 
         {error && (
           <div className="alert alert-danger" style={{ marginTop: "9rem" }}>
