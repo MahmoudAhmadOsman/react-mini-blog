@@ -26,7 +26,7 @@ const useFetch = (url) => {
         //console.log(res);
         //Check if there is an error from the Server
         if (!res.ok) {
-          throw Error("Caution: Unable to fetch the data for the server!");
+          throw Error("Caution: Unable to fetch the data from the server!");
         }
 
         return res.json(); //After this completes, then run .then function
