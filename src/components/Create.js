@@ -1,7 +1,7 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 const Create = () => {
-  const { title, setTitle } = useState();
+  //const { title, setTitle } = useState();
 
   const creatPost = "Create New Post";
   return (
@@ -18,7 +18,6 @@ const Create = () => {
                   className="form-control"
                   placeholder="Post title"
                   required
-                  value={title}
                 />
               </div>
             </div>
