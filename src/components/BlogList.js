@@ -44,7 +44,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
                   <i className="fa fa-calendar" aria-hidden="true"></i>
                 </b>
                 &nbsp; &nbsp;
-                {blog.PublushiedDate}
+                {blog.PublishedDate}
               </small>
             </p>
 

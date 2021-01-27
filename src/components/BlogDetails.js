@@ -56,7 +56,7 @@ const BlogDetails = () => {
               <p>
                 <i className="fa fa-user-circle"></i> &nbsp;
                 {blog.author} &nbsp; | &nbsp;
-                <span className="text-muted">{blog.PublushiedDate} </span>
+                <span className="text-muted">{blog.PublishedDate} </span>
               </p>
 
               <hr />
