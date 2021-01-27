@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 //St: 2 pass the props into the function -- Recieved props in destructing form
 const BlogList = ({ blogs, blogTitiles }) => {
   //const BlogList = (props) => same as top
@@ -12,16 +14,18 @@ const BlogList = ({ blogs, blogTitiles }) => {
       {blogs.map((blog) => (
         <div className="row" key={blog.id}>
           <div className="col-md-4">
-            <img
-              src={blog.blogImage}
-              alt={blog.title}
-              className="img-fluid img-thumbnail mb-1"
-            />
+            <Link to={`/blogs/${blog.id}`}>
+              <img
+                src={blog.blogImage}
+                alt={blog.title}
+                className="img-fluid img-thumbnail mb-1"
+              />
+            </Link>
           </div>
           <div className="col-md-7">
-            <h1>
-              <a href={blog.id}>{blog.title}</a>
-            </h1>
+            <Link to={`/blogs/${blog.id}`}>
+              <h1>{blog.title}</h1>
+            </Link>
             <p>{blog.body}</p>
             <p className="text-muted">
               <small>

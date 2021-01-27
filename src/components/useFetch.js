@@ -16,10 +16,12 @@ const useFetch = (url) => {
 */
 
   useEffect(() => {
+    //Abort Controller method
+    const abortController = new AbortController();
     //console.log(blogs);
     //Do fetch request here
 
-    fetch(url)
+    fetch(url, { signal: abortController.signal })
       .then((res) => {
         //console.log(res);
         //Check if there is an error from the Server
@@ -39,10 +41,18 @@ const useFetch = (url) => {
         setError(null);
       })
       .catch((err) => {
-        setisLoading(false);
-        //console.log(err.message);
-        setError(err.message);
+        //1st recognize the error
+        if (err.name === "AbortError") {
+          console.log("fetch data abborted..!");
+        } else {
+          setisLoading(false);
+          //console.log(err.message);
+          setError(err.message);
+        }
       });
+
+    //Last (optional): Cleanup useEffect using controller.abort() method to stop DOM request
+    return () => abortController.abort();
   }, [url]);
 
   //useFetch returns array or object

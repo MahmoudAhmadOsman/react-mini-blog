@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const Create = () => {
+  const { title, setTitle } = useState();
+
   const creatPost = "Create New Post";
   return (
     <section className="create_post">
@@ -14,6 +18,7 @@ const Create = () => {
                   className="form-control"
                   placeholder="Post title"
                   required
+                  value={title}
                 />
               </div>
             </div>
