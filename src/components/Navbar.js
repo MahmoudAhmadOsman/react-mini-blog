@@ -4,13 +4,13 @@ import logo from "../images/blog-logo.png";
 const Navbar = () => {
   return (
     <section className="main_navigation">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link class="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" to="/">
           <img src={logo} alt="logo" />
           React Mini Blog
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -18,27 +18,27 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">
-                Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <a className="nav-link" href="/">
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/about">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
                 about
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/blogs/create">
+            <li className="nav-item">
+              <Link className="nav-link" to="/blogs/create">
                 Add Post
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/contact">
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </li>

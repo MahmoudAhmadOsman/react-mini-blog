@@ -23,7 +23,7 @@ const BlogDetails = () => {
       {/* If there is an error show the error  */}
 
       {error && (
-        <div class="alert alert-danger" style={{ marginTop: "9rem" }}>
+        <div className="alert alert-danger" style={{ marginTop: "9rem" }}>
           <strong>
             <i className="fa fa-warning mr-1"></i>
             {error}

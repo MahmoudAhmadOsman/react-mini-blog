@@ -12,12 +12,12 @@ const Home = () => {
   );
 
   return (
-    <section className="home">
+    <section className="home_page">
       <div className="container">
         {/* St: 1 Use props to pass data to the BlogList component */}
 
         {error && (
-          <div class="alert alert-danger" style={{ marginTop: "9rem" }}>
+          <div className="alert alert-danger" style={{ marginTop: "9rem" }}>
             <strong>
               <i className="fa fa-warning mr-1"></i>
               {error}
