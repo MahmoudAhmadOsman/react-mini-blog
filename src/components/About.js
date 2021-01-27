@@ -5,6 +5,7 @@ const About = () => {
         <div className="row">
           <div className="col-md-8">
             <h1 className="text-info">About</h1> <hr />
+            <p>Coming soon!</p>
           </div>
         </div>
       </div>
