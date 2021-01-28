@@ -1,14 +1,27 @@
-//import { useState } from "react";
+import { useState } from "react";
 
 const Create = () => {
-  //const { title, setTitle } = useState();
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [blogImage, setBlogImage] = useState("");
+  const [body, setBody] = useState("");
+  const [publishedDate, setpublishedDate] = useState("");
+  const creatPostTitle = "Create New Post";
 
-  const creatPost = "Create New Post";
+  //handleSubmit function
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //alert("Form Submitted!");
+    //Now, create blog object
+    const blog = { title, author, blogImage, body, publishedDate };
+    console.log(blog);
+  };
+
   return (
     <section className="create_post">
       <div className="container">
-        <h1 className="text-info">{creatPost} </h1> <hr />
-        <form>
+        <h1 className="text-info">{creatPostTitle} </h1> <hr />
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-12">
               <div className="form-group">
@@ -16,10 +29,13 @@ const Create = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Post title"
+                  placeholder="Enter post title"
                   required
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
+              {/* <p>Post Title: {title}</p> */}
             </div>
           </div>
           {/* Author */}
@@ -32,8 +48,11 @@ const Create = () => {
                   className="form-control"
                   placeholder="Author name"
                   required
+                  value={author}
+                  onChange={(e) => setAuthor(e.target.value)}
                 />
               </div>
+              {/* <p>Author: {author}</p> */}
             </div>
           </div>
           {/* blog image */}
@@ -42,7 +61,13 @@ const Create = () => {
             <div className="col-md-12">
               <div className="form-group">
                 <label htmlFor="postImage">Post Image</label>
-                <input type="file" className="form-control" required />
+                <input
+                  type="file"
+                  className="form-control"
+                  required
+                  value={blogImage}
+                  onChange={(e) => setBlogImage(e.target.value)}
+                />
               </div>
             </div>
           </div>
@@ -60,6 +85,8 @@ const Create = () => {
                   rows="10"
                   placeholder="Post title"
                   required
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
                 ></textarea>
               </div>
             </div>
@@ -67,10 +94,16 @@ const Create = () => {
 
           {/* Published Date */}
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <div className="form-group">
                 <label htmlFor="date">Published Date</label>
-                <input type="date" className="form-control" required />
+                <input
+                  type="date"
+                  className="form-control"
+                  required
+                  value={publishedDate}
+                  onChange={(e) => setpublishedDate(e.target.value)}
+                />
               </div>
             </div>
           </div>
