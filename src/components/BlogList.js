@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
- 
+
 //St: 2 pass the props into the function -- Recieved props in destructing form
 const BlogList = ({ blogs, blogTitiles }) => {
   //const BlogList = (props) => same as top
@@ -7,44 +7,40 @@ const BlogList = ({ blogs, blogTitiles }) => {
   //   const blogs = props.blogs;
   //   console.log(props, blogs);
   // const blogTitiles = props.blogTitiles;
- 
 
+  //Delete blog post
+  // const handleDelete =() =>{
+  //   //alert("Delete btn")
+  //   fetch("http://localhost:8000/blogs/" + blogs.id, {
+  //     method: "DELETE",
 
-//Delete blog post
-// const handleDelete =() =>{
-//   //alert("Delete btn")
-//   fetch("http://localhost:8000/blogs/" + blogs.id, {
-//     method: "DELETE",
-
-//   }).then(() => {
-//     alert("Post deleted!");
-//   })
-// }
-
- 
+  //   }).then(() => {
+  //     alert("Post deleted!");
+  //   })
+  // }
 
   return (
-
     <div className="blog_list">
       <h1 className="text-danger">
-        {blogTitiles}  
+        {blogTitiles}
         <small
           className="text-muted pull-right mt-4"
           style={{ fontSize: "12px" }}
-        > # of posts <span className="text-primary">{blogs.length}</span> &nbsp; | 
-          Built with React js library | By
+        >
+          {" "}
+          # of posts <span className="text-primary">{blogs.length}</span> &nbsp;
+          | Built with React js library | By
           <a href="http://mahmoudosman.com/"> Mahmoud Osman</a>
         </small>
       </h1>
 
       <hr />
       {blogs.map((blog) => (
+        //  {blog.length < 0 ?
 
-//  {blog.length < 0 ?
- 
-//    <div className="alert alert-danger">No post</div>
-//  }
-//    :
+        //    <div className="alert alert-danger">No post</div>
+        //  }
+        //    :
 
         <div className="row" key={blog.id}>
           <div className="col-md-4">
@@ -54,11 +50,11 @@ const BlogList = ({ blogs, blogTitiles }) => {
                 alt={blog.title}
                 className="img-fluid img-thumbnail mb-1"
               />
-             </Link>
+            </Link>
           </div>
           <div className="col-md-7">
             <Link to={`/blogs/${blog.id}`}>
-              <h1>{blog.title}   </h1>
+              <h1>{blog.title} </h1>
             </Link>
             <p>{blog.body}</p>
             <p className="text-muted">
@@ -80,7 +76,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
                 &nbsp; &nbsp;
                 {blog.PublishedDate}
               </small>
-               {/* <button
+              {/* <button
               onClick={() => handleDelete(blog.id)}
               className="btn btn-outline-danger btn-sm fa fa-trash ml-3"
               title="Delete"
