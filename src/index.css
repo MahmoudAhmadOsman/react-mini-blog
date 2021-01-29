@@ -7,9 +7,9 @@
   font-family: "Quicksand";
   color: #333;
 }
-body{
+/* body{
   height: 1500px;
-}
+} */
 .navbar {
   padding: 20px;
   display: flex;
@@ -40,6 +40,13 @@ body{
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+
+
+
+/* Blog Details  */
+.blog_details{
+  min-height: 1500px
 }
 
  /* blog_list style */

@@ -8,7 +8,7 @@ const Home = () => {
 
   //Now, import the useFetch Custom Hook
   const { data: blogs, isLoading, error } = useFetch(
-    "https://blogs-api.herokuapp.com/blogs"
+    "https://blogs-api.herokuapp.com/blogs/"
   );
 
   return (

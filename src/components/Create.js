@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -6,7 +7,11 @@ const Create = () => {
   const [blogImage, setBlogImage] = useState("");
   const [body, setBody] = useState("");
   const [publishedDate, setpublishedDate] = useState("");
-  const creatPostTitle = "Create New Post";
+  const [isSuccess, setisSuccess] = useState(false);
+  //After post is created, redirect the user to the home page
+  const history = useHistory();
+
+  const creatPostTitle = "Add New Post";
 
   //handleSubmit function
   const handleSubmit = (e) => {
@@ -14,12 +19,30 @@ const Create = () => {
     //alert("Form Submitted!");
     //Now, create blog object
     const blog = { title, author, blogImage, body, publishedDate };
-    console.log(blog);
+    //console.log(blog);
+
+    //Now, make the POST request here to the same api endpoint
+
+    fetch("https://blogs-api.herokuapp.com/blogs/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(blog),
+    }).then(() => {
+      setisSuccess(true);
+      setTimeout(function () {
+        history.push("/");
+      }, 2000);
+    });
   };
 
   return (
     <section className="create_post">
       <div className="container">
+        {isSuccess && (
+          <div className="alert alert-success mt-3">
+            <strong>Success: </strong> A new blog post has been added!
+          </div>
+        )}
         <h1 className="text-info">{creatPostTitle} </h1> <hr />
         <form onSubmit={handleSubmit}>
           <div className="row">

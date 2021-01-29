@@ -4,6 +4,7 @@ import BlogDetails from "./components/BlogDetails";
 import Contact from "./components/Contact";
 
 import Create from "./components/Create";
+import NotFound from "./components/NotFound";
 
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -33,10 +34,14 @@ function App() {
             <Route exact path="/contact">
               <Contact />
             </Route>
+             <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
         </div>
       </div>
     </Router>
+     
   );
 }
 

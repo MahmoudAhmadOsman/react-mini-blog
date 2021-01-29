@@ -45,14 +45,14 @@ const useFetch = (url) => {
         if (err.name === "AbortError") {
           console.log("fetch data abborted..!");
         } else {
-          setisLoading(false);
+          // setisLoading(false);
           //console.log(err.message);
           setError(err.message);
         }
       });
 
     //Last (optional): Cleanup useEffect using controller.abort() method to stop DOM request
-    return () => abortController.abort();
+    //return () => abortController.abort();
   }, [url]);
 
   //useFetch returns array or object
