@@ -79,11 +79,11 @@ const BlogDetails = () => {
                 <span className="text-muted">{blog.PublishedDate} </span>
                 <button
                   onClick={() => handleDelete(blog.id)}
-                  className="btn btn-outline-danger btn-sm fa fa-trash ml-3"
+                  className="btn btn-outline-danger btn-sm fa fa-trash ml-3 pull-right"
                   title="Delete"
                 >
-                  &nbsp; DELETE{" "}
-                </button>
+                  &nbsp; DELETE
+                </button>{" "}
               </p>
 
               <hr />
