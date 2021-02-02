@@ -1,6 +1,6 @@
 //import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
-import Footer from "./Footer";
+ 
 import useFetch from "./useFetch";
 
 const Home = () => {
@@ -34,7 +34,7 @@ const Home = () => {
         {blogs && <BlogList blogs={blogs} blogTitiles={blogTitiles} />}
       </div>
 
-      <Footer />
+     
     </section>
   );
 };

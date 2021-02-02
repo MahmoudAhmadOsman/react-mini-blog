@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
 import BlogDetails from "./components/BlogDetails";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 import Create from "./components/Create";
 import NotFound from "./components/NotFound";
@@ -13,7 +14,7 @@ function App() {
   // const title = "React Mini Blog";
   return (
     <Router>
-      <div className="app">
+      <section className="app">
         <Navbar />
         <div className="home_container">
           <Switch>
@@ -34,14 +35,14 @@ function App() {
             <Route exact path="/contact">
               <Contact />
             </Route>
-             <Route path="*">
+            <Route path="*">
               <NotFound />
             </Route>
           </Switch>
         </div>
-      </div>
+        <Footer />
+      </section>
     </Router>
-     
   );
 }
 
