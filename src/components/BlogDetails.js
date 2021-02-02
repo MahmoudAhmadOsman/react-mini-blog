@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const BlogDetails = () => {
-  const blogDetailsTitle = " Blog Details";
+  const blogDetailsTitle = "Details of ";
   const history = useHistory();
 
   //Use (useParams) Hook to get the blog params such as id, title, body etc
@@ -56,7 +56,7 @@ const BlogDetails = () => {
       {blog && (
         <div className="container">
           <h1 className="text-info mt-3">
-            {blogDetailsTitle}
+            {blogDetailsTitle} <span className="text-muted">{blog.title}</span>
             <Link to="/">
               <i className="fa fa-chevron-left pull-right" title="Go back"></i>
             </Link>
