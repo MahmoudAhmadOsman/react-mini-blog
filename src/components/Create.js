@@ -87,7 +87,7 @@ const Create = () => {
                 <input
                   type="file"
                   className="form-control"
-                  required
+                  
                   value={blogImage}
                   onChange={(e) => setBlogImage(e.target.value)}
                 />
