@@ -46,7 +46,7 @@
 
 /* Blog Details  */
 .blog_details{
-  min-height: 1500px
+  min-height: auto;
 }
 
  /* blog_list style */
