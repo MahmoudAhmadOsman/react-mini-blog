@@ -53,6 +53,9 @@
  .blog_list{
    position: relative;
  }
+.blog_list small{
+ float: right !important; 
+}
  .blog_list img{
    width: 100%;
  }
