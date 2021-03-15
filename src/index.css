@@ -53,7 +53,7 @@
  .blog_list{
    position: relative;
  }
-.blog_list small{
+.blog_list small.who-wrote{
  float: right !important;
 }
  .blog_list img{
