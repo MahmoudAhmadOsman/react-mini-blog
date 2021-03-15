@@ -28,7 +28,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           style={{ fontSize: "12px" }}
         >
           {" "}
-          # of posts <span className="text-primary">{blogs.length}</span> &nbsp;
+          # of posts <span className="badge badge-danger">{blogs.length}</span> &nbsp;
           | Built with React js library | By
           <a href="http://mahmoudosman.com/"> Mahmoud Osman</a>
         </small>
