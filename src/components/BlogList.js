@@ -24,7 +24,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
       <h1 className="text-danger">
         {blogTitiles}
         <small
-          className="text-muted pull-right mt-4"
+          className="text-muted who-wrote mt-4"
           style={{ fontSize: "12px" }}
         >
           {" "}
