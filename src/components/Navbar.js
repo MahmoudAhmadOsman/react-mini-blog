@@ -4,7 +4,7 @@ import logo from "../images/blog-logo.png";
 const Navbar = () => {
   return (
     <section className="main_navigation">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="logo" />
           React Mini Blog
