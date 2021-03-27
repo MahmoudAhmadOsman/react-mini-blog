@@ -34,6 +34,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
             placeholder="Search a blog by name..."
             onChange={(event) => {
               setSearchTerm(event.target.value);
+              // console.log(event.target.value);
             }}
           />
         </div>
