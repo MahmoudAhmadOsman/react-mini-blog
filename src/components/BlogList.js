@@ -33,8 +33,8 @@ const BlogList = ({ blogs, blogTitiles }) => {
             class="form-control search-term input-lg"
             placeholder="Search a blog by name..."
             onChange={(event) => {
+              console.log(event.target.value);
               setSearchTerm(event.target.value);
-              // console.log(event.target.value);
             }}
           />
         </div>
@@ -50,7 +50,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           ) {
             return blog;
           }
-        }, null)
+        })
         .map((blog, key) => (
           <div className="row" key={blog.id}>
             <div className="col-md-4">

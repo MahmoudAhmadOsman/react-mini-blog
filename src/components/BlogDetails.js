@@ -23,6 +23,16 @@ const BlogDetails = () => {
       history.push("/");
     });
   };
+  //Handle Edit
+  const handleEdit = () => {
+    //alert("Delete btn")
+    fetch("https://blogs-api.herokuapp.com/blogs/" + blog.id, {
+      method: "PATCH",
+    }).then(() => {
+      alert("Edit is not working at the moment!!!!");
+      history.push("/");
+    });
+  };
 
   //Default image
   //  const addDefaultSrc = (ev) =>{
@@ -81,9 +91,12 @@ const BlogDetails = () => {
                   onClick={() => handleDelete(blog.id)}
                   className="btn btn-outline-danger btn-sm fa fa-trash ml-3 pull-right"
                   title="Delete"
-                >
-                  &nbsp; DELETE
-                </button>{" "}
+                ></button>{" "}
+                <button
+                  onClick={() => handleEdit(blog.id)}
+                  className="btn btn-outline-success btn-sm fa fa-edit ml-3 pull-right"
+                  title="Edit"
+                ></button>
               </p>
 
               <hr />
