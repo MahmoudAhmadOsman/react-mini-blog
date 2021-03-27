@@ -14,10 +14,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           className="text-muted who-wrote mt-4"
           style={{ fontSize: "12px" }}
         >
-          {" "}
-          # of posts <span className="badge badge-danger">
-            {blogs.length}
-          </span>{" "}
+          # of posts <span className="badge badge-danger">{blogs.length}</span>
           &nbsp; | Built with React js library | By
           <Link to="http://mahmoudosman.com/"> Mahmoud Osman</Link>
         </small>
@@ -33,7 +30,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
             class="form-control search-term input-lg"
             placeholder="Search a blog by name..."
             onChange={(event) => {
-              console.log(event.target.value);
+              // console.log(event.target.value);
               setSearchTerm(event.target.value);
             }}
           />
