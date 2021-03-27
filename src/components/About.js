@@ -23,7 +23,8 @@ const About = () => {
               or connect me via LinkedIn
               <Link
                 to="https://www.linkedin.com/in/mahmoudaosman/"
-                target={"_blank"}
+                target="_blank"
+                rel="noreferrer"
               >
                 <i
                   class="fa fa-linkedin fa-fw fa-1x"
@@ -32,7 +33,11 @@ const About = () => {
                 ></i>
               </Link>
               or see some of my work on GitHub
-              <a href="https://github.com/mahmoudahmadosman/" target={"_blank"}>
+              <a
+                href="https://github.com/mahmoudahmadosman/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i
                   class="fa fa-github-square fa-fw fa-1x"
                   aria-hidden="true"
