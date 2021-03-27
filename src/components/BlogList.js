@@ -4,8 +4,8 @@ import "./BlogList.css";
 
 //St: 2 pass the props into the function -- Recieved props in destructing form
 const BlogList = ({ blogs, blogTitiles }) => {
+  //Search Term
   const [searchTerm, setSearchTerm] = useState("");
-
   return (
     <section className="blog_list">
       <h1 className="text-danger">
