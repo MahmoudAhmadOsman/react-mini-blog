@@ -34,7 +34,6 @@ const BlogList = ({ blogs, blogTitiles }) => {
       </h1>
 
       <hr />
-
       <div className="data-list">
         {/* Start of Search Term div */}
         <div className="search_term">
