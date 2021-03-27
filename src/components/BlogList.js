@@ -17,7 +17,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
             {blogs.length}
           </span>{" "}
           &nbsp; | Built with React js library | By
-          <a href="http://mahmoudosman.com/"> Mahmoud Osman</a>
+          <Link to="http://mahmoudosman.com/"> Mahmoud Osman</Link>
         </small>
       </h1>
 
