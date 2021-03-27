@@ -50,8 +50,8 @@ const BlogList = ({ blogs, blogTitiles }) => {
           ) {
             return blog;
           }
-        })
-        .map((blog) => (
+        }, null)
+        .map((blog, key) => (
           <div className="row" key={blog.id}>
             <div className="col-md-4">
               <Link to={`/blogs/${blog.id}`}>
