@@ -88,11 +88,6 @@ const BlogList = ({ blogs, blogTitiles }) => {
                   &nbsp; &nbsp;
                   {blog.PublishedDate}
                 </small>
-                {/* <button
-              onClick={() => handleDelete(blog.id)}
-              className="btn btn-outline-danger btn-sm fa fa-trash ml-3"
-              title="Delete"
-            ></button> */}
               </p>
 
               <hr />
