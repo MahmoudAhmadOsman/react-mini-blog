@@ -15,7 +15,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
   useEffect(() => {
     const results = blogs.filter(
       (blog) =>
-        blog.title.toLowerCase().includes(searchTerm) ||
+        blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         blog.author.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
@@ -54,7 +54,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
         <div className="alert alert-danger">
           <i className="fa fa-warning"></i> &nbsp; The searched term of &nbsp;
           <b>
-            <Link to="/">{searchTerm}</Link>{" "}
+            <Link to="/">{searchTerm}</Link>
           </b>
           &nbsp; is not found!
         </div>
