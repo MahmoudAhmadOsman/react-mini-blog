@@ -13,8 +13,10 @@ const BlogList = ({ blogs, blogTitiles }) => {
   };
 
   useEffect(() => {
-    const results = blogs.filter((blog) =>
-      blog.title.toLowerCase().includes(searchTerm)
+    const results = blogs.filter(
+      (blog) =>
+        blog.title.toLowerCase().includes(searchTerm) ||
+        blog.author.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
   }, [searchTerm, blogs]);
