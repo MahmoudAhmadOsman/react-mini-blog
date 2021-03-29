@@ -40,7 +40,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           <input
             type="text"
             class="form-control search-term input-lg"
-            placeholder="Search a blog by name..."
+            placeholder="Search by blog title or author name..."
             value={searchTerm}
             onChange={handleChange}
           />
