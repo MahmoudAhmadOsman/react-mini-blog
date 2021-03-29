@@ -52,7 +52,11 @@ const BlogList = ({ blogs, blogTitiles }) => {
 
       {searchResults.length === 0 ? (
         <div className="alert alert-danger">
-          <i className="fa fa-warning"></i> &nbsp; Data not found!
+          <i className="fa fa-warning"></i> &nbsp; The searched term of &nbsp;
+          <b>
+            <Link to="/">{searchTerm}</Link>{" "}
+          </b>
+          &nbsp; is not found!
         </div>
       ) : (
         searchResults.map((blog, key) => (
