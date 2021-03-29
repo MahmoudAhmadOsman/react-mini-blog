@@ -28,7 +28,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           <input
             type="text"
             class="form-control search-term input-lg"
-            placeholder="Search by blog title or author..."
+            placeholder="Search by blog title or by author name..."
             onChange={(event) => {
               // console.log(event.target.value);
               setSearchTerm(event.target.value);
