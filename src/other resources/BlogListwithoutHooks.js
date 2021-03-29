@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BlogList.css";
 
@@ -6,19 +6,6 @@ import "./BlogList.css";
 const BlogList = ({ blogs, blogTitiles }) => {
   //Search Term
   const [searchTerm, setSearchTerm] = useState("");
-
-  const [searchResults, setSearchResults] = useState([]);
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  useEffect(() => {
-    const results = blogs.filter((blog) =>
-      blog.title.toLowerCase().includes(searchTerm)
-    );
-    setSearchResults(results);
-  }, [searchTerm, blogs]);
-
   return (
     <section className="blog_list">
       <h1 className="text-danger">
@@ -34,26 +21,39 @@ const BlogList = ({ blogs, blogTitiles }) => {
       </h1>
 
       <hr />
+
       <div className="data-list">
         {/* Start of Search Term div */}
         <div className="search_term">
           <input
             type="text"
             class="form-control search-term input-lg"
-            placeholder="Search a blog by name..."
-            value={searchTerm}
-            onChange={handleChange}
+            placeholder="Search by blog title or author name..."
+            onChange={(event) => {
+              // console.log(event.target.value);
+              setSearchTerm(event.target.value);
+            }}
           />
         </div>
       </div>
       {/* end of Search Term div */}
 
-      {blogs.length === 0 ? (
-        <div>No data</div>
-      ) : (
-        searchResults.map((blog, key) => (
+      {blogs
+
+        // eslint-disable-next-line array-callback-return
+        .filter((blog) => {
+          if (searchTerm === "") {
+            return blog;
+          } else if (
+            blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            blog.author.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return blog;
+          }
+        })
+        .map((blog) => (
           <div className="row" key={blog.id}>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-2">
               <Link to={`/blogs/${blog.id}`}>
                 <img
                   src={blog.blogImage}
@@ -86,18 +86,12 @@ const BlogList = ({ blogs, blogTitiles }) => {
                   &nbsp; &nbsp;
                   {blog.PublishedDate}
                 </small>
-                {/* <button
-              onClick={() => handleDelete(blog.id)}
-              className="btn btn-outline-danger btn-sm fa fa-trash ml-3"
-              title="Delete"
-            ></button> */}
               </p>
 
               <hr />
             </div>
           </div>
-        ))
-      )}
+        ))}
     </section>
   );
 };
