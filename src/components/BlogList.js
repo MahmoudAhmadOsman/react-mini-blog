@@ -28,7 +28,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           <input
             type="text"
             class="form-control search-term input-lg"
-            placeholder="Search a blog by name..."
+            placeholder="Search by blog title or author..."
             onChange={(event) => {
               // console.log(event.target.value);
               setSearchTerm(event.target.value);
@@ -39,11 +39,13 @@ const BlogList = ({ blogs, blogTitiles }) => {
       {/* end of Search Term div */}
 
       {blogs
+        // eslint-disable-next-line array-callback-return
         .filter((blog) => {
           if (searchTerm === "") {
             return blog;
           } else if (
-            blog.title.toLowerCase().includes(searchTerm.toLowerCase())
+            blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            blog.author.toLowerCase().includes(searchTerm.toLowerCase())
           ) {
             return blog;
           }
@@ -83,11 +85,6 @@ const BlogList = ({ blogs, blogTitiles }) => {
                   &nbsp; &nbsp;
                   {blog.PublishedDate}
                 </small>
-                {/* <button
-              onClick={() => handleDelete(blog.id)}
-              className="btn btn-outline-danger btn-sm fa fa-trash ml-3"
-              title="Delete"
-            ></button> */}
               </p>
 
               <hr />
