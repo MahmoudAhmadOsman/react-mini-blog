@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./BlogList.css";
 
-//St: 2 pass the props into the function -- Recieved props in destructing form
+//St: 2 pass the props into the function -- Recieved props in destructuring form
 const BlogList = ({ blogs, blogTitiles }) => {
   //Search Term
   const [searchTerm, setSearchTerm] = useState("");
