@@ -52,7 +52,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
         })
         .map((blog, key) => (
           <div className="row" key={blog.id}>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-2">
               <Link to={`/blogs/${blog.id}`}>
                 <img
                   src={blog.blogImage}
