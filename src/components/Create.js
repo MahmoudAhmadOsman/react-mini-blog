@@ -22,7 +22,6 @@ const Create = () => {
     //console.log(blog);
 
     //Now, make the POST request here to the same api endpoint
-
     fetch("https://blogs-api.herokuapp.com/blogs/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -87,7 +86,6 @@ const Create = () => {
                 <input
                   type="file"
                   className="form-control"
-                  
                   value={blogImage}
                   onChange={(e) => setBlogImage(e.target.value)}
                 />

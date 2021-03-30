@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./BlogList.css";
+import _ from "lodash";
 
 //St: 2 pass the props into the function -- Recieved props in destructuring form
 const BlogList = ({ blogs, blogTitiles }) => {
+  //Pagination - pageSize
+  const pageSize = 2;
+
   //Search Term
   const [searchTerm, setSearchTerm] = useState("");
-
   const [searchResults, setSearchResults] = useState([]);
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -20,6 +23,13 @@ const BlogList = ({ blogs, blogTitiles }) => {
     );
     setSearchResults(results);
   }, [searchTerm, blogs]);
+
+  //Pagination - PageCount
+  const pageCount = blogs ? Math.ceil(blogs.length / pageSize) : 0;
+  if (pageCount === 1) return null;
+
+  //Pages - All pages
+  const pages = _.range(1, pageCount + 1);
 
   return (
     <section className="blog_list">
@@ -59,7 +69,7 @@ const BlogList = ({ blogs, blogTitiles }) => {
           &nbsp; is not found!
         </div>
       ) : (
-        searchResults.map((blog, key) => (
+        searchResults.map((blog) => (
           <div className="row" key={blog.id}>
             <div className="col-md-4 mb-2">
               <Link to={`/blogs/${blog.id}`}>
@@ -101,6 +111,18 @@ const BlogList = ({ blogs, blogTitiles }) => {
           </div>
         ))
       )}
+
+      {/* Start of pagination */}
+
+      <div class="container mt-4">
+        <ul class="pagination pagination-lg">
+          {pages.map((page) => (
+            <li class="page-link">{page}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* End of pagination */}
     </section>
   );
 };

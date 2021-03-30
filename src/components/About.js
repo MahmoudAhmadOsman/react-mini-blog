@@ -27,7 +27,7 @@ const About = () => {
                 rel="noreferrer"
               >
                 <i
-                  class="fa fa-linkedin fa-fw fa-1x"
+                  className="fa fa-linkedin fa-fw fa-1x"
                   aria-hidden="true"
                   title="linkedin"
                 ></i>
@@ -39,7 +39,7 @@ const About = () => {
                 rel="noreferrer"
               >
                 <i
-                  class="fa fa-github-square fa-fw fa-1x"
+                  className="fa fa-github-square fa-fw fa-1x"
                   aria-hidden="true"
                   title="github"
                 ></i>

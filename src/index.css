@@ -9,7 +9,10 @@
 }
 
 body {
-  background-color: #f2f1f1
+  width:auto;
+  position: relative;
+  background-color: #f2f1f1;
+  height:100%;
 }
 
 .navbar {
@@ -46,18 +49,24 @@ body {
 .content {
   max-width: 600px;
   margin: 40px auto;
+  position: relative;
   padding: 20px;
+  
 }
 
 
 
 /* Blog Details  */
 .blog_details {
-  min-height: auto;
+  position: relative;
+  width: auto;
+  height: auto;
 }
 
 /* blog_list style */
 .blog_list {
+  width: auto;
+  height: auto;
   position: relative;
 }
 
@@ -73,7 +82,6 @@ body {
 .blog_list .fa-calendar {
   color: #ee611f;
   font-size: 18px;
-
   opacity: .7;
 }
 
@@ -90,7 +98,9 @@ body {
 
 /* Footer */
 footer {
-  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 20% auto;
   left: 0;
   right: 0;
   position: absolute;

@@ -8,9 +8,7 @@ const Footer = () => {
 
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-              atque ea quis molestias. Fugiat pariatur maxime quis culpa
-              corporis vitae repudiandae aliquam voluptatem veniam, est atque
-              cumque eum delectus sint!
+              atque ea quis molestias.
             </p>
           </div>
 
@@ -19,16 +17,10 @@ const Footer = () => {
 
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
+                <a href="/about">About</a>
               </li>
             </ul>
           </div>
@@ -38,16 +30,10 @@ const Footer = () => {
 
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="/blogs/create">add post</a>
               </li>
               <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
