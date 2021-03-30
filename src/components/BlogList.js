@@ -6,7 +6,8 @@ import _ from "lodash";
 //St: 2 pass the props into the function -- Recieved props in destructuring form
 const BlogList = ({ blogs, blogTitiles }) => {
   //Pagination - pageSize
-  const pageSize = 2;
+  // const pageSize = 2;
+  // const [currentPage, setcurrentPage] = useState(1);
 
   //Search Term
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,11 +26,20 @@ const BlogList = ({ blogs, blogTitiles }) => {
   }, [searchTerm, blogs]);
 
   //Pagination - PageCount
-  const pageCount = blogs ? Math.ceil(blogs.length / pageSize) : 0;
-  if (pageCount === 1) return null;
+  // const pageCount = blogs ? Math.ceil(blogs.length / pageSize) : 0;
+  // if (pageCount === 1) return null;
 
   //Pages - All pages
-  const pages = _.range(1, pageCount + 1);
+  // const pages = _.range(1, pageCount + 1);
+
+  //Pagination Function
+  // const pagination = (pageNo) => {
+  //   setcurrentPage(pageNo);
+  //   const startIndex = (pageNo - 1) * pageSize;
+  //   const paginatedBlog = _(blogs).slice(startIndex).take(pageSize).value();
+  //   setcurrentPage(paginatedBlog);
+  //   setData(paginatedBlog);
+  // };
 
   return (
     <section className="blog_list">
@@ -114,13 +124,17 @@ const BlogList = ({ blogs, blogTitiles }) => {
 
       {/* Start of pagination */}
 
-      <div class="container mt-4">
-        <ul class="pagination pagination-lg">
+      {/* <div className="container mt-4">
+        <ul className="pagination pagination-lg">
           {pages.map((page) => (
-            <li class="page-link">{page}</li>
+            <li class={page === currentPage ? "page-item active" : "page-item"}>
+              <p className="page-link" onClick={() => pagination(page)}>
+                {page}
+              </p>
+            </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       {/* End of pagination */}
     </section>
