@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./BlogList.css";
-import _ from "lodash";
+// import _ from "lodash";
 
 //St: 2 pass the props into the function -- Recieved props in destructuring form
 const BlogList = ({ blogs, blogTitiles }) => {
