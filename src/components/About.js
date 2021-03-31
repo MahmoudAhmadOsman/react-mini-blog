@@ -16,11 +16,7 @@ const About = () => {
               Angular, Spring Boot, Nodejs, Express, MongoDB HTML, CSS3, SASS &
               more. I have working knowledge about frontend & backend of web
               technologies including CMS such as WordPress and Drupal 7 & 8
-              content management systems (CMS). I love helping small, medium, to
-              large-sized businesses utilizing the available technologies and
-              the techniques that I know. I am currently open to new
-              opportunities and projects; so please don't hesitate to email me
-              or connect me via LinkedIn
+              content management systems (CMS). Connect me via LinkedIn
               <Link
                 to="https://www.linkedin.com/in/mahmoudaosman/"
                 target="_blank"
