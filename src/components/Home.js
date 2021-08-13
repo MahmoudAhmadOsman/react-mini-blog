@@ -4,7 +4,7 @@ import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  let blogTitiles = "React js Blogs";
+  const blogTitiles = "React js Blogs";
 
   //Now, import the useFetch Custom Hook
   const { data: blogs, isLoading, error } = useFetch(
