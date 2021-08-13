@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <section className="home_page">
       <div className="container">
-        {/*1. Use props to pass data to the BlogList component */}
+      
 
         {error && (
           <div className="alert alert-danger" style={{ marginTop: "9rem" }}>
@@ -31,6 +31,7 @@ const Home = () => {
             title="loading data..."
           ></div>
         )}
+  {/*1. Use props to pass data to the BlogList component */}
         {blogs && <BlogList blogs={blogs} blogTitiles={blogTitiles} />}
       </div>
     </section>
