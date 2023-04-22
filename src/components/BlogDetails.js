@@ -16,7 +16,7 @@ const BlogDetails = () => {
   //Delete blog post
   const handleDelete = () => {
     //alert("Delete btn")
-    fetch("https://blogs-api.herokuapp.com/blogs/" + blog.id, {
+    fetch("https://stapes-api.onrender.com/blogs/" + blog.id, {
       method: "DELETE",
     }).then(() => {
       alert("Are you sure, you want to delete this post?");
