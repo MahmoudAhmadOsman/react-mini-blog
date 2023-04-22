@@ -10,7 +10,7 @@ const BlogDetails = () => {
   const { id } = useParams();
   //Get the rest of the blog details by using the custon useFetch Hook
   const { data: blog, error, isLoading } = useFetch(
-    "https://blogs-api.herokuapp.com/blogs/" + id
+    "https://stapes-api.onrender.com/blogs/" + id
   );
 
   //Delete blog post
