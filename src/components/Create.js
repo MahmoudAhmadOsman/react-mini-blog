@@ -22,7 +22,7 @@ const Create = () => {
     //console.log(blog);
 
     //Now, make the POST request here to the same api endpoint
-    fetch("https://blogs-api.herokuapp.com/blogs/", {
+    fetch("https://stapes-api.onrender.com/blogs/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
