@@ -26,7 +26,7 @@ const BlogDetails = () => {
   //Handle Edit
   const handleEdit = () => {
     //alert("Delete btn")
-    fetch("https://blogs-api.herokuapp.com/blogs/" + blog.id, {
+    fetch("https://stapes-api.onrender.com/blogs/" + blog.id, {
       method: "PATCH",
     }).then(() => {
       alert("Edit is not working at the moment!!!!");
