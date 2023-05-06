@@ -112,7 +112,14 @@ const BlogList = ({ blogs, blogTitiles }) => {
                     <i className="fa fa-calendar" aria-hidden="true"></i>
                   </b>
                   &nbsp; &nbsp;
-                  {blog.PublishedDate}
+                  {blog.PublishedDate ?(
+blog.PublishedDate) : (
+<span> {new Date().getFullYear()}</span>
+)
+
+
+
+}
                 </small>
               </p>
 
