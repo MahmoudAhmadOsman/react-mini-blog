@@ -114,7 +114,12 @@ const BlogList = ({ blogs, blogTitiles }) => {
                   &nbsp; &nbsp;
                   {blog.PublishedDate ?(
 blog.PublishedDate) : (
-<span> {new Date().getFullYear()}</span>
+<span> {
+
+new Date().getDate()          
+new Date().getDay() 
+
+new Date().getFullYear()}</span>
 )
 
 
