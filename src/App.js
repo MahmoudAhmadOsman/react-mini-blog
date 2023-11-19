@@ -21,18 +21,18 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/about">
+            <Route path="/about">
               <About />
             </Route>
-            <Route exact path="/blogs/create">
+            <Route  path="/blogs/create">
               <Create />
             </Route>
 
-            <Route exact path="/blogs/:id">
+            <Route  path="/blogs/:id">
               <BlogDetails />
             </Route>
 
-            <Route exact path="/contact">
+            <Route  path="/contact">
               <Contact />
             </Route>
             <Route path="*">
