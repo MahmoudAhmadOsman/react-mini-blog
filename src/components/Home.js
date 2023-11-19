@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <section className="home_page">
-      <div className="container">
+      <div className="container card shadow p-3  mb-4">
       
 
         {error && (
